@@ -16,8 +16,6 @@ def _stable_text(obj: Any) -> str:
         return f"<{type(obj).__name__}>"
 
 
-
-
 def _sympy_tensor_key(expr: Any):
     """Cheap structural keys for SymPy abstract-tensor objects.
 
@@ -62,12 +60,23 @@ def _sympy_tensor_key(expr: Any):
             args = tuple(sorted(args))
         return ("sympy_tensor_expr", op, args)
     return None
+
 @lru_cache(maxsize=4096)
 def _sympy_structural_key_cached(expr: sp.Basic):
+    # SymPy abstract tensor expressions implement legacy iteration through
+    # the deprecated `.data` API. Generic scalar simplifiers such as
+    # `cancel` / `factor_terms` probe iterability and therefore trigger that
+    # deprecated path. Build tensor keys directly before any scalar
+    # simplification.
+    tensor_key = _sympy_tensor_key(expr)
+    if tensor_key is not None:
+        return tensor_key
+
     try:
         expr = light_simplify(expr)
     except Exception:
         pass
+
     return _sympy_structural_key(expr)
 
 

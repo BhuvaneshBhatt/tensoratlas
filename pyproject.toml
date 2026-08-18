@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=68", "wheel"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -8,14 +8,13 @@ version = "0.1.0"
 description = "SymPy-backed symbolic tensor algebra, coordinate geometry, forms, relativity, and geometric algebra."
 readme = "README.md"
 requires-python = ">=3.10"
-license = {text = "GPL-3.0-only"}
+license = "GPL-3.0-only"
 license-files = ["LICENSE"]
 authors = [{name = "Bhuvanesh Bhatt (bhuvaneshbhatt@gmail.com)"}]
 keywords = ["sympy", "tensor algebra", "differential geometry", "relativity", "geometric algebra"]
 classifiers = [
   "Development Status :: 3 - Alpha",
   "Intended Audience :: Science/Research",
-  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
@@ -28,7 +27,14 @@ dependencies = ["sympy>=1.12"]
 dev = ["pytest>=7", "ruff>=0.5", "mypy>=1.8", "build>=1", "twine>=5"]
 plot = ["matplotlib>=3.8", "numpy>=1.26"]
 docs = ["mkdocs>=1.5", "mkdocs-material>=9"]
-
+test = [
+    "pytest>=8",
+    "pytest-cov>=5",
+    "pytest-timeout>=2",
+    "hypothesis>=6",
+    "matplotlib>=3.8",
+    "numpy>=1.26",
+]
 
 [tool.setuptools]
 package-dir = {"" = "src"}

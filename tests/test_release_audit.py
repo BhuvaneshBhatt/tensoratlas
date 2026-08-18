@@ -1,6 +1,20 @@
+from __future__ import annotations
+
+import importlib.util
 from pathlib import Path
 
-from tools import release_audit
+
+def _load_release_audit():
+    path = Path(__file__).resolve().parents[1] / "tools" / "release_audit.py"
+    spec = importlib.util.spec_from_file_location("tensoratlas_release_audit", path)
+    if spec is None or spec.loader is None:
+        raise RuntimeError(f"Could not load release audit module from {path}")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+release_audit = _load_release_audit()
 
 
 def test_release_audit_detects_duplicate_defs(tmp_path, monkeypatch):
@@ -9,6 +23,7 @@ def test_release_audit_detects_duplicate_defs(tmp_path, monkeypatch):
     bad = package / "bad.py"
     bad.write_text("def repeated():\n    pass\n\ndef repeated():\n    pass\n")
     monkeypatch.setattr(release_audit, "ROOT", tmp_path)
+    monkeypatch.setattr(release_audit, "SRC", package)
     errors: list[str] = []
     release_audit.check_duplicate_defs(errors)
     assert any("duplicate top-level definition" in item for item in errors)
@@ -27,7 +42,9 @@ def test_release_audit_detects_generated_artifacts(tmp_path, monkeypatch):
 def test_release_audit_detects_forbidden_text(tmp_path, monkeypatch):
     docs = tmp_path / "docs"
     docs.mkdir()
-    (docs / "bad.md").write_text("forbidden proprietary reference: " + "Transformed" + "Field" + "\n")
+    (docs / "bad.md").write_text(
+        "forbidden proprietary reference: " + "Transformed" + "Field" + "\n"
+    )
     monkeypatch.setattr(release_audit, "ROOT", tmp_path)
     monkeypatch.setattr(release_audit, "PUBLIC_DIRS", [docs])
     monkeypatch.setattr(release_audit, "ROOT_TEXT_FILES", [])

@@ -1,22 +1,23 @@
-from tensoratlas import __public_api__
+import tensoratlas
 from tensoratlas.indexed_pipeline import INDEXED_NORMALIZATION_STAGES, IndexedNormalizationPlan
 
 
 def test_public_api_curated_surface_contains_core_entry_points():
     required = {
-        "coordinate_chart",
-        "coordinate_map",
+        "CoordinateChart",
+        "CoordinateMap",
         "transform_coordinates",
         "transform_field",
         "gradient",
         "divergence",
         "curl",
         "laplacian",
-        "ScalarField",
-        "VectorField",
-        "TensorField",
+        "TensorArray",
+        "DifferentialForm",
+        "MetricModel",
+        "GeometricAlgebra",
     }
-    assert required.issubset(set(__public_api__))
+    assert required.issubset(set(tensoratlas.__all__))
 
 
 def test_indexed_normalization_plan_is_documented_and_ordered():
