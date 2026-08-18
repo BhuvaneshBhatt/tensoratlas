@@ -1,0 +1,495 @@
+{
+  "metrics": [
+    "Euclidean",
+    "FRW",
+    "Hyperbolic",
+    "Minkowski",
+    "Rindler",
+    "Schwarzschild",
+    "antiDeSitter",
+    "deSitter"
+  ],
+  "charts": [
+    {
+      "metric": "Euclidean",
+      "chart": "Bipolar",
+      "dimension": 2
+    },
+    {
+      "metric": "Euclidean",
+      "chart": "Bispherical",
+      "dimension": 3
+    },
+    {
+      "metric": "Euclidean",
+      "chart": "Cartesian",
+      "dimension": 2
+    },
+    {
+      "metric": "Euclidean",
+      "chart": "Cartesian",
+      "dimension": 3
+    },
+    {
+      "metric": "Euclidean",
+      "chart": "Conical",
+      "dimension": 3
+    },
+    {
+      "metric": "Euclidean",
+      "chart": "Cylindrical",
+      "dimension": 3
+    },
+    {
+      "metric": "Euclidean",
+      "chart": "Ellipsoidal",
+      "dimension": 3
+    },
+    {
+      "metric": "Euclidean",
+      "chart": "Elliptic",
+      "dimension": 2
+    },
+    {
+      "metric": "Euclidean",
+      "chart": "EllipticCylindrical",
+      "dimension": 3
+    },
+    {
+      "metric": "Euclidean",
+      "chart": "Hyperspherical",
+      "dimension": 3
+    },
+    {
+      "metric": "Euclidean",
+      "chart": "OblateSpheroidal",
+      "dimension": 3
+    },
+    {
+      "metric": "Euclidean",
+      "chart": "Parabolic",
+      "dimension": 2
+    },
+    {
+      "metric": "Euclidean",
+      "chart": "ParabolicCylindrical",
+      "dimension": 3
+    },
+    {
+      "metric": "Euclidean",
+      "chart": "Paraboloidal",
+      "dimension": 3
+    },
+    {
+      "metric": "Euclidean",
+      "chart": "Polar",
+      "dimension": 2
+    },
+    {
+      "metric": "Euclidean",
+      "chart": "ProlateSpheroidal",
+      "dimension": 3
+    },
+    {
+      "metric": "Euclidean",
+      "chart": "Spherical",
+      "dimension": 3
+    },
+    {
+      "metric": "Euclidean",
+      "chart": "Toroidal",
+      "dimension": 3
+    },
+    {
+      "metric": "FRW",
+      "chart": "Standard",
+      "dimension": 4
+    },
+    {
+      "metric": "Hyperbolic",
+      "chart": "GeodesicPolar",
+      "dimension": 2
+    },
+    {
+      "metric": "Hyperbolic",
+      "chart": "HyperboloidPolar",
+      "dimension": 2
+    },
+    {
+      "metric": "Hyperbolic",
+      "chart": "PoincareDisk",
+      "dimension": 2
+    },
+    {
+      "metric": "Hyperbolic",
+      "chart": "PoincareHalfPlane",
+      "dimension": 2
+    },
+    {
+      "metric": "Hyperbolic",
+      "chart": "Polar",
+      "dimension": 2
+    },
+    {
+      "metric": "Minkowski",
+      "chart": "Cartesian",
+      "dimension": 4
+    },
+    {
+      "metric": "Minkowski",
+      "chart": "Cylindrical",
+      "dimension": 4
+    },
+    {
+      "metric": "Minkowski",
+      "chart": "LightCone",
+      "dimension": 4
+    },
+    {
+      "metric": "Minkowski",
+      "chart": "Spherical",
+      "dimension": 4
+    },
+    {
+      "metric": "Rindler",
+      "chart": "Standard",
+      "dimension": 4
+    },
+    {
+      "metric": "Schwarzschild",
+      "chart": "EddingtonFinkelstein",
+      "dimension": 4
+    },
+    {
+      "metric": "Schwarzschild",
+      "chart": "KruskalSzekeres",
+      "dimension": 4
+    },
+    {
+      "metric": "antiDeSitter",
+      "chart": "Global",
+      "dimension": 4
+    },
+    {
+      "metric": "antiDeSitter",
+      "chart": "Poincare",
+      "dimension": 4
+    },
+    {
+      "metric": "deSitter",
+      "chart": "FlatSlicing",
+      "dimension": 4
+    },
+    {
+      "metric": "deSitter",
+      "chart": "Static",
+      "dimension": 4
+    }
+  ],
+  "mappings": [
+    {
+      "source_metric": "Euclidean",
+      "source": "Bipolar",
+      "source_dimension": 2,
+      "target_metric": "Euclidean",
+      "target": "Cartesian",
+      "target_dimension": 2
+    },
+    {
+      "source_metric": "Euclidean",
+      "source": "Bispherical",
+      "source_dimension": 3,
+      "target_metric": "Euclidean",
+      "target": "Cartesian",
+      "target_dimension": 3
+    },
+    {
+      "source_metric": "Euclidean",
+      "source": "Cartesian",
+      "source_dimension": 2,
+      "target_metric": "Euclidean",
+      "target": "Bipolar",
+      "target_dimension": 2
+    },
+    {
+      "source_metric": "Euclidean",
+      "source": "Cartesian",
+      "source_dimension": 2,
+      "target_metric": "Euclidean",
+      "target": "Elliptic",
+      "target_dimension": 2
+    },
+    {
+      "source_metric": "Euclidean",
+      "source": "Cartesian",
+      "source_dimension": 2,
+      "target_metric": "Euclidean",
+      "target": "Parabolic",
+      "target_dimension": 2
+    },
+    {
+      "source_metric": "Euclidean",
+      "source": "Cartesian",
+      "source_dimension": 2,
+      "target_metric": "Euclidean",
+      "target": "Polar",
+      "target_dimension": 2
+    },
+    {
+      "source_metric": "Euclidean",
+      "source": "Cartesian",
+      "source_dimension": 3,
+      "target_metric": "Euclidean",
+      "target": "Bispherical",
+      "target_dimension": 3
+    },
+    {
+      "source_metric": "Euclidean",
+      "source": "Cartesian",
+      "source_dimension": 3,
+      "target_metric": "Euclidean",
+      "target": "Conical",
+      "target_dimension": 3
+    },
+    {
+      "source_metric": "Euclidean",
+      "source": "Cartesian",
+      "source_dimension": 3,
+      "target_metric": "Euclidean",
+      "target": "Cylindrical",
+      "target_dimension": 3
+    },
+    {
+      "source_metric": "Euclidean",
+      "source": "Cartesian",
+      "source_dimension": 3,
+      "target_metric": "Euclidean",
+      "target": "Ellipsoidal",
+      "target_dimension": 3
+    },
+    {
+      "source_metric": "Euclidean",
+      "source": "Cartesian",
+      "source_dimension": 3,
+      "target_metric": "Euclidean",
+      "target": "EllipticCylindrical",
+      "target_dimension": 3
+    },
+    {
+      "source_metric": "Euclidean",
+      "source": "Cartesian",
+      "source_dimension": 3,
+      "target_metric": "Euclidean",
+      "target": "OblateSpheroidal",
+      "target_dimension": 3
+    },
+    {
+      "source_metric": "Euclidean",
+      "source": "Cartesian",
+      "source_dimension": 3,
+      "target_metric": "Euclidean",
+      "target": "ParabolicCylindrical",
+      "target_dimension": 3
+    },
+    {
+      "source_metric": "Euclidean",
+      "source": "Cartesian",
+      "source_dimension": 3,
+      "target_metric": "Euclidean",
+      "target": "Paraboloidal",
+      "target_dimension": 3
+    },
+    {
+      "source_metric": "Euclidean",
+      "source": "Cartesian",
+      "source_dimension": 3,
+      "target_metric": "Euclidean",
+      "target": "ProlateSpheroidal",
+      "target_dimension": 3
+    },
+    {
+      "source_metric": "Euclidean",
+      "source": "Cartesian",
+      "source_dimension": 3,
+      "target_metric": "Euclidean",
+      "target": "Spherical",
+      "target_dimension": 3
+    },
+    {
+      "source_metric": "Euclidean",
+      "source": "Cartesian",
+      "source_dimension": 3,
+      "target_metric": "Euclidean",
+      "target": "Toroidal",
+      "target_dimension": 3
+    },
+    {
+      "source_metric": "Euclidean",
+      "source": "Conical",
+      "source_dimension": 3,
+      "target_metric": "Euclidean",
+      "target": "Cartesian",
+      "target_dimension": 3
+    },
+    {
+      "source_metric": "Euclidean",
+      "source": "Cylindrical",
+      "source_dimension": 3,
+      "target_metric": "Euclidean",
+      "target": "Cartesian",
+      "target_dimension": 3
+    },
+    {
+      "source_metric": "Euclidean",
+      "source": "Cylindrical",
+      "source_dimension": 3,
+      "target_metric": "Euclidean",
+      "target": "Spherical",
+      "target_dimension": 3
+    },
+    {
+      "source_metric": "Euclidean",
+      "source": "Ellipsoidal",
+      "source_dimension": 3,
+      "target_metric": "Euclidean",
+      "target": "Cartesian",
+      "target_dimension": 3
+    },
+    {
+      "source_metric": "Euclidean",
+      "source": "Elliptic",
+      "source_dimension": 2,
+      "target_metric": "Euclidean",
+      "target": "Cartesian",
+      "target_dimension": 2
+    },
+    {
+      "source_metric": "Euclidean",
+      "source": "EllipticCylindrical",
+      "source_dimension": 3,
+      "target_metric": "Euclidean",
+      "target": "Cartesian",
+      "target_dimension": 3
+    },
+    {
+      "source_metric": "Euclidean",
+      "source": "OblateSpheroidal",
+      "source_dimension": 3,
+      "target_metric": "Euclidean",
+      "target": "Cartesian",
+      "target_dimension": 3
+    },
+    {
+      "source_metric": "Euclidean",
+      "source": "Parabolic",
+      "source_dimension": 2,
+      "target_metric": "Euclidean",
+      "target": "Cartesian",
+      "target_dimension": 2
+    },
+    {
+      "source_metric": "Euclidean",
+      "source": "ParabolicCylindrical",
+      "source_dimension": 3,
+      "target_metric": "Euclidean",
+      "target": "Cartesian",
+      "target_dimension": 3
+    },
+    {
+      "source_metric": "Euclidean",
+      "source": "Paraboloidal",
+      "source_dimension": 3,
+      "target_metric": "Euclidean",
+      "target": "Cartesian",
+      "target_dimension": 3
+    },
+    {
+      "source_metric": "Euclidean",
+      "source": "Polar",
+      "source_dimension": 2,
+      "target_metric": "Euclidean",
+      "target": "Cartesian",
+      "target_dimension": 2
+    },
+    {
+      "source_metric": "Euclidean",
+      "source": "ProlateSpheroidal",
+      "source_dimension": 3,
+      "target_metric": "Euclidean",
+      "target": "Cartesian",
+      "target_dimension": 3
+    },
+    {
+      "source_metric": "Euclidean",
+      "source": "Spherical",
+      "source_dimension": 3,
+      "target_metric": "Euclidean",
+      "target": "Cartesian",
+      "target_dimension": 3
+    },
+    {
+      "source_metric": "Euclidean",
+      "source": "Spherical",
+      "source_dimension": 3,
+      "target_metric": "Euclidean",
+      "target": "Cylindrical",
+      "target_dimension": 3
+    },
+    {
+      "source_metric": "Euclidean",
+      "source": "Toroidal",
+      "source_dimension": 3,
+      "target_metric": "Euclidean",
+      "target": "Cartesian",
+      "target_dimension": 3
+    },
+    {
+      "source_metric": "Minkowski",
+      "source": "Cartesian",
+      "source_dimension": 4,
+      "target_metric": "Minkowski",
+      "target": "Cylindrical",
+      "target_dimension": 4
+    },
+    {
+      "source_metric": "Minkowski",
+      "source": "Cartesian",
+      "source_dimension": 4,
+      "target_metric": "Minkowski",
+      "target": "LightCone",
+      "target_dimension": 4
+    },
+    {
+      "source_metric": "Minkowski",
+      "source": "Cartesian",
+      "source_dimension": 4,
+      "target_metric": "Rindler",
+      "target": "Standard",
+      "target_dimension": 4
+    },
+    {
+      "source_metric": "Minkowski",
+      "source": "Cylindrical",
+      "source_dimension": 4,
+      "target_metric": "Minkowski",
+      "target": "Cartesian",
+      "target_dimension": 4
+    },
+    {
+      "source_metric": "Minkowski",
+      "source": "LightCone",
+      "source_dimension": 4,
+      "target_metric": "Minkowski",
+      "target": "Cartesian",
+      "target_dimension": 4
+    },
+    {
+      "source_metric": "Rindler",
+      "source": "Standard",
+      "source_dimension": 4,
+      "target_metric": "Minkowski",
+      "target": "Cartesian",
+      "target_dimension": 4
+    }
+  ]
+}
