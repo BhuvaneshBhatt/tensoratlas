@@ -35,6 +35,13 @@ test = [
     "matplotlib>=3.8",
     "numpy>=1.26",
 ]
+release = [
+
+    "build>=1.2",
+
+    "twine>=6",
+
+]
 
 [tool.setuptools]
 package-dir = {"" = "src"}
